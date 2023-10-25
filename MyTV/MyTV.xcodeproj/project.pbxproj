@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F4DB08F42AE7B14600C4CA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F32AE7B14600C4CA36 /* AppDelegate.swift */; };
 		F4DB08F62AE7B14600C4CA36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F52AE7B14600C4CA36 /* SceneDelegate.swift */; };
-		F4DB08F82AE7B14600C4CA36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F72AE7B14600C4CA36 /* ViewController.swift */; };
+		F4DB08F82AE7B14600C4CA36 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F72AE7B14600C4CA36 /* LoginViewController.swift */; };
 		F4DB08FB2AE7B14600C4CA36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DB08F92AE7B14600C4CA36 /* Main.storyboard */; };
 		F4DB08FD2AE7B14900C4CA36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4DB08FC2AE7B14900C4CA36 /* Assets.xcassets */; };
 		F4DB09002AE7B14900C4CA36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DB08FE2AE7B14900C4CA36 /* LaunchScreen.storyboard */; };
@@ -36,11 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4CB1F912AE8CE0D00F0C00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4CB1F922AE8CE1400F0C00E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		F4CB1F9C2AE8CEE300F0C00E /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
 		F4DB08F02AE7B14600C4CA36 /* MyTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DB08F32AE7B14600C4CA36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4DB08F52AE7B14600C4CA36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F4DB08F72AE7B14600C4CA36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F4DB08FA2AE7B14600C4CA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4DB08F72AE7B14600C4CA36 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F4DB08FC2AE7B14900C4CA36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4DB08FF2AE7B14900C4CA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4DB09012AE7B14900C4CA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,7 +103,7 @@
 			children = (
 				F4DB08F32AE7B14600C4CA36 /* AppDelegate.swift */,
 				F4DB08F52AE7B14600C4CA36 /* SceneDelegate.swift */,
-				F4DB08F72AE7B14600C4CA36 /* ViewController.swift */,
+				F4DB08F72AE7B14600C4CA36 /* LoginViewController.swift */,
 				F4DB08F92AE7B14600C4CA36 /* Main.storyboard */,
 				F4DB08FC2AE7B14900C4CA36 /* Assets.xcassets */,
 				F4DB08FE2AE7B14900C4CA36 /* LaunchScreen.storyboard */,
@@ -213,6 +215,7 @@
 			knownRegions = (
 				en,
 				Base,
+				hi,
 			);
 			mainGroup = F4DB08E72AE7B14600C4CA36;
 			productRefGroup = F4DB08F12AE7B14600C4CA36 /* Products */;
@@ -258,7 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4DB08F82AE7B14600C4CA36 /* ViewController.swift in Sources */,
+				F4DB08F82AE7B14600C4CA36 /* LoginViewController.swift in Sources */,
 				F4DB08F42AE7B14600C4CA36 /* AppDelegate.swift in Sources */,
 				F4DB08F62AE7B14600C4CA36 /* SceneDelegate.swift in Sources */,
 			);
@@ -300,7 +303,9 @@
 		F4DB08F92AE7B14600C4CA36 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F4DB08FA2AE7B14600C4CA36 /* Base */,
+				F4CB1F912AE8CE0D00F0C00E /* Base */,
+				F4CB1F922AE8CE1400F0C00E /* en */,
+				F4CB1F9C2AE8CEE300F0C00E /* hi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -384,6 +390,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
