@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F443AD5F2B56A08B00DDF825 /* MyAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443AD5E2B56A08B00DDF825 /* MyAccountTableViewCell.swift */; };
+		F443AD612B56A15700DDF825 /* MyAccountDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443AD602B56A15700DDF825 /* MyAccountDataSource.swift */; };
+		F443AD872B57EAD300DDF825 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F443AD862B57EAD300DDF825 /* Localizable.xcstrings */; };
+		F443AD892B57F90000DDF825 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443AD882B57F90000DDF825 /* AccountDetailsViewController.swift */; };
+		F486A4B82B31692200E324AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A4B72B31692200E324AF /* HomeViewController.swift */; };
+		F486A4BA2B32AE1900E324AF /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */; };
 		F4DB08F42AE7B14600C4CA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F32AE7B14600C4CA36 /* AppDelegate.swift */; };
 		F4DB08F62AE7B14600C4CA36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F52AE7B14600C4CA36 /* SceneDelegate.swift */; };
 		F4DB08F82AE7B14600C4CA36 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F72AE7B14600C4CA36 /* LoginViewController.swift */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F443AD5E2B56A08B00DDF825 /* MyAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewCell.swift; sourceTree = "<group>"; };
+		F443AD602B56A15700DDF825 /* MyAccountDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountDataSource.swift; sourceTree = "<group>"; };
+		F443AD862B57EAD300DDF825 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		F443AD882B57F90000DDF825 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
+		F486A4B72B31692200E324AF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		F4CB1F912AE8CE0D00F0C00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4CB1F922AE8CE1400F0C00E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		F4CB1F9C2AE8CEE300F0C00E /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
@@ -108,6 +120,12 @@
 				F4DB08FC2AE7B14900C4CA36 /* Assets.xcassets */,
 				F4DB08FE2AE7B14900C4CA36 /* LaunchScreen.storyboard */,
 				F4DB09012AE7B14900C4CA36 /* Info.plist */,
+				F486A4B72B31692200E324AF /* HomeViewController.swift */,
+				F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */,
+				F443AD5E2B56A08B00DDF825 /* MyAccountTableViewCell.swift */,
+				F443AD602B56A15700DDF825 /* MyAccountDataSource.swift */,
+				F443AD882B57F90000DDF825 /* AccountDetailsViewController.swift */,
+				F443AD862B57EAD300DDF825 /* Localizable.xcstrings */,
 			);
 			path = MyTV;
 			sourceTree = "<group>";
@@ -237,6 +255,7 @@
 				F4DB09002AE7B14900C4CA36 /* LaunchScreen.storyboard in Resources */,
 				F4DB08FD2AE7B14900C4CA36 /* Assets.xcassets in Resources */,
 				F4DB08FB2AE7B14600C4CA36 /* Main.storyboard in Resources */,
+				F443AD872B57EAD300DDF825 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +281,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4DB08F82AE7B14600C4CA36 /* LoginViewController.swift in Sources */,
+				F443AD5F2B56A08B00DDF825 /* MyAccountTableViewCell.swift in Sources */,
 				F4DB08F42AE7B14600C4CA36 /* AppDelegate.swift in Sources */,
+				F443AD892B57F90000DDF825 /* AccountDetailsViewController.swift in Sources */,
+				F486A4BA2B32AE1900E324AF /* MyAccountViewController.swift in Sources */,
 				F4DB08F62AE7B14600C4CA36 /* SceneDelegate.swift in Sources */,
+				F443AD612B56A15700DDF825 /* MyAccountDataSource.swift in Sources */,
+				F486A4B82B31692200E324AF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

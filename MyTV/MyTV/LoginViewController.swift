@@ -15,9 +15,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var copyRightLabel: UILabel!
     
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
-        let mainTabBarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainTabBarController") as! UITabBarController
-        self.navigationController?.pushViewController(mainTabBarController, animated: true)
+    @IBAction private func loginButtonTapped(_ sender: UIButton) {
+        let mainNavigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNavigationController") as! UINavigationController
+        mainNavigationController.modalPresentationStyle = .fullScreen
+        self.present(mainNavigationController, animated: true)
     }
     
     override func viewDidLoad() {
