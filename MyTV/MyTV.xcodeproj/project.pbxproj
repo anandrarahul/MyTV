@@ -10,7 +10,11 @@
 		F443AD5F2B56A08B00DDF825 /* MyAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443AD5E2B56A08B00DDF825 /* MyAccountTableViewCell.swift */; };
 		F443AD612B56A15700DDF825 /* MyAccountDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443AD602B56A15700DDF825 /* MyAccountDataSource.swift */; };
 		F443AD872B57EAD300DDF825 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F443AD862B57EAD300DDF825 /* Localizable.xcstrings */; };
-		F443AD892B57F90000DDF825 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443AD882B57F90000DDF825 /* AccountDetailsViewController.swift */; };
+		F443AD952B58457C00DDF825 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443AD942B58457C00DDF825 /* LoginViewControllerTests.swift */; };
+		F443AD972B58478500DDF825 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443AD962B58478500DDF825 /* MockNavigationController.swift */; };
+		F45447752B5BB7E60082A50D /* AccountsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45447742B5BB7E60082A50D /* AccountsDetailViewController.swift */; };
+		F45447772B5BBCFA0082A50D /* DeviceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45447762B5BBCF90082A50D /* DeviceDetailsViewController.swift */; };
+		F45447792B5BBFC30082A50D /* DeviceDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45447782B5BBFC30082A50D /* DeviceDetailsTableViewCell.swift */; };
 		F486A4B82B31692200E324AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A4B72B31692200E324AF /* HomeViewController.swift */; };
 		F486A4BA2B32AE1900E324AF /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */; };
 		F4DB08F42AE7B14600C4CA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F32AE7B14600C4CA36 /* AppDelegate.swift */; };
@@ -19,7 +23,6 @@
 		F4DB08FB2AE7B14600C4CA36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DB08F92AE7B14600C4CA36 /* Main.storyboard */; };
 		F4DB08FD2AE7B14900C4CA36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4DB08FC2AE7B14900C4CA36 /* Assets.xcassets */; };
 		F4DB09002AE7B14900C4CA36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4DB08FE2AE7B14900C4CA36 /* LaunchScreen.storyboard */; };
-		F4DB090B2AE7B14A00C4CA36 /* MyTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB090A2AE7B14A00C4CA36 /* MyTVTests.swift */; };
 		F4DB09152AE7B14A00C4CA36 /* MyTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB09142AE7B14A00C4CA36 /* MyTVUITests.swift */; };
 		F4DB09172AE7B14A00C4CA36 /* MyTVUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB09162AE7B14A00C4CA36 /* MyTVUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +48,11 @@
 		F443AD5E2B56A08B00DDF825 /* MyAccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewCell.swift; sourceTree = "<group>"; };
 		F443AD602B56A15700DDF825 /* MyAccountDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountDataSource.swift; sourceTree = "<group>"; };
 		F443AD862B57EAD300DDF825 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		F443AD882B57F90000DDF825 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
+		F443AD942B58457C00DDF825 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		F443AD962B58478500DDF825 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
+		F45447742B5BB7E60082A50D /* AccountsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsDetailViewController.swift; sourceTree = "<group>"; };
+		F45447762B5BBCF90082A50D /* DeviceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailsViewController.swift; sourceTree = "<group>"; };
+		F45447782B5BBFC30082A50D /* DeviceDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		F486A4B72B31692200E324AF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		F4CB1F912AE8CE0D00F0C00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,7 +66,6 @@
 		F4DB08FF2AE7B14900C4CA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4DB09012AE7B14900C4CA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4DB09062AE7B14A00C4CA36 /* MyTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4DB090A2AE7B14A00C4CA36 /* MyTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTVTests.swift; sourceTree = "<group>"; };
 		F4DB09102AE7B14A00C4CA36 /* MyTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DB09142AE7B14A00C4CA36 /* MyTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTVUITests.swift; sourceTree = "<group>"; };
 		F4DB09162AE7B14A00C4CA36 /* MyTVUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTVUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -90,6 +96,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F45447672B5A99310082A50D /* MyAccountsTab */ = {
+			isa = PBXGroup;
+			children = (
+				F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */,
+				F443AD5E2B56A08B00DDF825 /* MyAccountTableViewCell.swift */,
+				F443AD602B56A15700DDF825 /* MyAccountDataSource.swift */,
+				F45447742B5BB7E60082A50D /* AccountsDetailViewController.swift */,
+				F45447762B5BBCF90082A50D /* DeviceDetailsViewController.swift */,
+				F45447782B5BBFC30082A50D /* DeviceDetailsTableViewCell.swift */,
+			);
+			path = MyAccountsTab;
+			sourceTree = "<group>";
+		};
+		F45447722B5A99F40082A50D /* MyTvViewsAndAssets */ = {
+			isa = PBXGroup;
+			children = (
+				F4DB08F92AE7B14600C4CA36 /* Main.storyboard */,
+				F4DB08FC2AE7B14900C4CA36 /* Assets.xcassets */,
+				F4DB08FE2AE7B14900C4CA36 /* LaunchScreen.storyboard */,
+				F443AD862B57EAD300DDF825 /* Localizable.xcstrings */,
+			);
+			path = MyTvViewsAndAssets;
+			sourceTree = "<group>";
+		};
+		F45447732B5A9A710082A50D /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				F486A4B72B31692200E324AF /* HomeViewController.swift */,
+			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
 		F4DB08E72AE7B14600C4CA36 = {
 			isa = PBXGroup;
 			children = (
@@ -116,16 +154,10 @@
 				F4DB08F32AE7B14600C4CA36 /* AppDelegate.swift */,
 				F4DB08F52AE7B14600C4CA36 /* SceneDelegate.swift */,
 				F4DB08F72AE7B14600C4CA36 /* LoginViewController.swift */,
-				F4DB08F92AE7B14600C4CA36 /* Main.storyboard */,
-				F4DB08FC2AE7B14900C4CA36 /* Assets.xcassets */,
-				F4DB08FE2AE7B14900C4CA36 /* LaunchScreen.storyboard */,
 				F4DB09012AE7B14900C4CA36 /* Info.plist */,
-				F486A4B72B31692200E324AF /* HomeViewController.swift */,
-				F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */,
-				F443AD5E2B56A08B00DDF825 /* MyAccountTableViewCell.swift */,
-				F443AD602B56A15700DDF825 /* MyAccountDataSource.swift */,
-				F443AD882B57F90000DDF825 /* AccountDetailsViewController.swift */,
-				F443AD862B57EAD300DDF825 /* Localizable.xcstrings */,
+				F45447722B5A99F40082A50D /* MyTvViewsAndAssets */,
+				F45447732B5A9A710082A50D /* HomeTab */,
+				F45447672B5A99310082A50D /* MyAccountsTab */,
 			);
 			path = MyTV;
 			sourceTree = "<group>";
@@ -133,7 +165,8 @@
 		F4DB09092AE7B14A00C4CA36 /* MyTVTests */ = {
 			isa = PBXGroup;
 			children = (
-				F4DB090A2AE7B14A00C4CA36 /* MyTVTests.swift */,
+				F443AD942B58457C00DDF825 /* LoginViewControllerTests.swift */,
+				F443AD962B58478500DDF825 /* MockNavigationController.swift */,
 			);
 			path = MyTVTests;
 			sourceTree = "<group>";
@@ -283,10 +316,12 @@
 				F4DB08F82AE7B14600C4CA36 /* LoginViewController.swift in Sources */,
 				F443AD5F2B56A08B00DDF825 /* MyAccountTableViewCell.swift in Sources */,
 				F4DB08F42AE7B14600C4CA36 /* AppDelegate.swift in Sources */,
-				F443AD892B57F90000DDF825 /* AccountDetailsViewController.swift in Sources */,
+				F45447772B5BBCFA0082A50D /* DeviceDetailsViewController.swift in Sources */,
+				F45447752B5BB7E60082A50D /* AccountsDetailViewController.swift in Sources */,
 				F486A4BA2B32AE1900E324AF /* MyAccountViewController.swift in Sources */,
 				F4DB08F62AE7B14600C4CA36 /* SceneDelegate.swift in Sources */,
 				F443AD612B56A15700DDF825 /* MyAccountDataSource.swift in Sources */,
+				F45447792B5BBFC30082A50D /* DeviceDetailsTableViewCell.swift in Sources */,
 				F486A4B82B31692200E324AF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +330,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4DB090B2AE7B14A00C4CA36 /* MyTVTests.swift in Sources */,
+				F443AD952B58457C00DDF825 /* LoginViewControllerTests.swift in Sources */,
+				F443AD972B58478500DDF825 /* MockNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
