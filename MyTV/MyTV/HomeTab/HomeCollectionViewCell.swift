@@ -7,10 +7,28 @@
 
 import UIKit
 
+protocol ImageLoaderProtocol {
+    func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void)
+}
+
+class ImageLoader: ImageLoaderProtocol {
+    func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+        URLSession.shared.dataTask(with: url) { data, _, _ in
+            if let data = data, let image = UIImage(data: data) {
+                completion(image)
+            } else {
+                completion(nil)
+            }
+        }.resume()
+    }
+}
+
 class HomeCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    var imageLoader: ImageLoaderProtocol = ImageLoader()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,22 +36,22 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
     
     func setThumbnailAndTitle(thumbnail: String?, title: String?) {
-        if let thumb = thumbnail {
-            let thumbnailUrl = URL(string: thumb)!
-            URLSession.shared.dataTask(with: thumbnailUrl) { data, response, error in
-                DispatchQueue.main.async {
-                    if let _ = error {
-                        self.imageView.image = UIImage(named: "noImage")
-                    } else {
-                        if let imageData = data {
-                            self.imageView.image = UIImage(data: imageData)
-                        }
-                    }
-                }
-            }.resume()
-        }
         if let title = title {
             self.titleLabel.text = title
+        }
+        guard let thumb = thumbnail, let thumbnailUrl = URL(string: thumb) else {
+            return
+        }
+        self.imageLoader.loadImage(from: thumbnailUrl) { [weak self] image in
+            DispatchQueue.main.async {
+                if let strongSelf = self {
+                    if let image = image {
+                        strongSelf.imageView.image = image
+                    } else {
+                        strongSelf.imageView.image = UIImage(named: "noImage")
+                    }
+                }
+            }
         }
     }
 
