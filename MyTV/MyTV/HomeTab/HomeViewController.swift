@@ -75,17 +75,18 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        self.videoDetailsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let homeCollectionViewCell = self.homeCollectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCell", for: indexPath) as! HomeCollectionViewCell
+            homeCollectionViewCell.setThumbnailAndTitle(thumbnail: self.videoDetailsList[indexPath.row].thumb, title: self.videoDetailsList[indexPath.row].title)
         return homeCollectionViewCell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = self.homeCollectionView.frame.width - 20
-        let cellHeight = self.homeCollectionView.frame.height * 0.4
+        let cellWidth = self.homeCollectionView.frame.width
+        let cellHeight = self.homeCollectionView.frame.width * 0.7
         return CGSize(width: cellWidth, height: cellHeight)
     }
 }

@@ -20,6 +20,7 @@
 		F454477F2B5CFF2E0082A50D /* FB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F454477E2B5CFF2E0082A50D /* FB-Info.plist */; };
 		F45447812B5CFF450082A50D /* VideoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45447802B5CFF450082A50D /* VideoDetails.swift */; };
 		F45447832B5D02050082A50D /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45447822B5D02050082A50D /* RestAPI.swift */; };
+		F45447992B5D9ADA0082A50D /* HomeCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45447982B5D9ADA0082A50D /* HomeCollectionViewCellTests.swift */; };
 		F486A4B82B31692200E324AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A4B72B31692200E324AF /* HomeViewController.swift */; };
 		F486A4BA2B32AE1900E324AF /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */; };
 		F4DB08F42AE7B14600C4CA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F32AE7B14600C4CA36 /* AppDelegate.swift */; };
@@ -63,6 +64,7 @@
 		F454477E2B5CFF2E0082A50D /* FB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FB-Info.plist"; sourceTree = "<group>"; };
 		F45447802B5CFF450082A50D /* VideoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetails.swift; sourceTree = "<group>"; };
 		F45447822B5D02050082A50D /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
+		F45447982B5D9ADA0082A50D /* HomeCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCellTests.swift; sourceTree = "<group>"; };
 		F486A4B72B31692200E324AF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		F4CB1F912AE8CE0D00F0C00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +145,23 @@
 			path = HomeTab;
 			sourceTree = "<group>";
 		};
+		F45447962B5D9A620082A50D /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				F45447982B5D9ADA0082A50D /* HomeCollectionViewCellTests.swift */,
+			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		F45447972B5D9A750082A50D /* AuthenticationScreens */ = {
+			isa = PBXGroup;
+			children = (
+				F443AD942B58457C00DDF825 /* LoginViewControllerTests.swift */,
+				F443AD962B58478500DDF825 /* MockNavigationController.swift */,
+			);
+			path = AuthenticationScreens;
+			sourceTree = "<group>";
+		};
 		F4DB08E72AE7B14600C4CA36 = {
 			isa = PBXGroup;
 			children = (
@@ -180,8 +199,8 @@
 		F4DB09092AE7B14A00C4CA36 /* MyTVTests */ = {
 			isa = PBXGroup;
 			children = (
-				F443AD942B58457C00DDF825 /* LoginViewControllerTests.swift */,
-				F443AD962B58478500DDF825 /* MockNavigationController.swift */,
+				F45447972B5D9A750082A50D /* AuthenticationScreens */,
+				F45447962B5D9A620082A50D /* HomeTab */,
 			);
 			path = MyTVTests;
 			sourceTree = "<group>";
@@ -352,6 +371,7 @@
 			files = (
 				F443AD952B58457C00DDF825 /* LoginViewControllerTests.swift in Sources */,
 				F443AD972B58478500DDF825 /* MockNavigationController.swift in Sources */,
+				F45447992B5D9ADA0082A50D /* HomeCollectionViewCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
