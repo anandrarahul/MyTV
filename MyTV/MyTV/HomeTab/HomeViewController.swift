@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
     private func performNetworkCall() {
         
         if let endpoint = self.restApi.getUrlForVideos() {
-            VideoListNetworkService.fetchVideoList(endpoint: endpoint) { videoDetails, error in
+            VideoListNetworkService.shared.fetchVideoList(endpoint: endpoint) { videoDetails, error in
                 DispatchQueue.main.async {
                     self.activityIndicator.stopAnimating()
                     self.activityIndicator.isHidden = true

@@ -21,6 +21,11 @@
 		F45447812B5CFF450082A50D /* VideoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45447802B5CFF450082A50D /* VideoDetails.swift */; };
 		F45447832B5D02050082A50D /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45447822B5D02050082A50D /* RestAPI.swift */; };
 		F45447992B5D9ADA0082A50D /* HomeCollectionViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45447982B5D9ADA0082A50D /* HomeCollectionViewCellTests.swift */; };
+		F45EB8AD2B5E43B2004C0564 /* VideoDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45EB8AC2B5E43B2004C0564 /* VideoDetailsTests.swift */; };
+		F45EB8AF2B5E452D004C0564 /* RestAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45EB8AE2B5E452D004C0564 /* RestAPITests.swift */; };
+		F45EB8B12B5E4602004C0564 /* FB-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45EB8B02B5E4602004C0564 /* FB-Info.plist */; };
+		F45EB8B32B5E4AFF004C0564 /* VideoListNetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45EB8B22B5E4AFF004C0564 /* VideoListNetworkServiceTests.swift */; };
+		F45EB8B52B5EC1F4004C0564 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45EB8B42B5EC1F4004C0564 /* MockURLSession.swift */; };
 		F486A4B82B31692200E324AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A4B72B31692200E324AF /* HomeViewController.swift */; };
 		F486A4BA2B32AE1900E324AF /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */; };
 		F4DB08F42AE7B14600C4CA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F32AE7B14600C4CA36 /* AppDelegate.swift */; };
@@ -65,6 +70,11 @@
 		F45447802B5CFF450082A50D /* VideoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetails.swift; sourceTree = "<group>"; };
 		F45447822B5D02050082A50D /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
 		F45447982B5D9ADA0082A50D /* HomeCollectionViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCellTests.swift; sourceTree = "<group>"; };
+		F45EB8AC2B5E43B2004C0564 /* VideoDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsTests.swift; sourceTree = "<group>"; };
+		F45EB8AE2B5E452D004C0564 /* RestAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPITests.swift; sourceTree = "<group>"; };
+		F45EB8B02B5E4602004C0564 /* FB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FB-Info.plist"; sourceTree = "<group>"; };
+		F45EB8B22B5E4AFF004C0564 /* VideoListNetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListNetworkServiceTests.swift; sourceTree = "<group>"; };
+		F45EB8B42B5EC1F4004C0564 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		F486A4B72B31692200E324AF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		F4CB1F912AE8CE0D00F0C00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,6 +159,11 @@
 			isa = PBXGroup;
 			children = (
 				F45447982B5D9ADA0082A50D /* HomeCollectionViewCellTests.swift */,
+				F45EB8B22B5E4AFF004C0564 /* VideoListNetworkServiceTests.swift */,
+				F45EB8B42B5EC1F4004C0564 /* MockURLSession.swift */,
+				F45EB8AC2B5E43B2004C0564 /* VideoDetailsTests.swift */,
+				F45EB8AE2B5E452D004C0564 /* RestAPITests.swift */,
+				F45EB8B02B5E4602004C0564 /* FB-Info.plist */,
 			);
 			path = HomeTab;
 			sourceTree = "<group>";
@@ -332,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45EB8B12B5E4602004C0564 /* FB-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,8 +385,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45EB8AF2B5E452D004C0564 /* RestAPITests.swift in Sources */,
 				F443AD952B58457C00DDF825 /* LoginViewControllerTests.swift in Sources */,
+				F45EB8B32B5E4AFF004C0564 /* VideoListNetworkServiceTests.swift in Sources */,
 				F443AD972B58478500DDF825 /* MockNavigationController.swift in Sources */,
+				F45EB8B52B5EC1F4004C0564 /* MockURLSession.swift in Sources */,
+				F45EB8AD2B5E43B2004C0564 /* VideoDetailsTests.swift in Sources */,
 				F45447992B5D9ADA0082A50D /* HomeCollectionViewCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

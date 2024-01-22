@@ -14,11 +14,29 @@ enum VideoError: Error {
     case dataNotFound
 }
 
-final class VideoListNetworkService {
+protocol VideoListNetworkServiceProtocol {
+    typealias CompletionHandler = ([VideoDetails]?, Error?) -> Void
+
+    func fetchVideoList(endpoint: URL, completion: @escaping CompletionHandler)
+}
+
+protocol URLSessionProtocol {
+    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+}
+
+final class VideoListNetworkService: VideoListNetworkServiceProtocol {
     
-    static func fetchVideoList(endpoint: URL, completion: @escaping ([VideoDetails]?, Error?) -> Void) {
+    static var shared: VideoListNetworkServiceProtocol = VideoListNetworkService()
+
+    private let session: URLSessionProtocol
+
+    init(session: URLSessionProtocol = URLSession.shared) {
+        self.session = session
+    }
+
+    func fetchVideoList(endpoint: URL, completion: @escaping CompletionHandler) {
         let decoder = JSONDecoder()
-        URLSession.shared.dataTask(with: endpoint) { data, response, error in
+        session.dataTask(with: endpoint) { data, response, error in
             if let _ = error {
                 completion(nil, VideoError.invalidResponse)
             } else {
@@ -30,6 +48,9 @@ final class VideoListNetworkService {
                 }
             }
         }.resume()
-        
     }
+}
+
+extension URLSession: URLSessionProtocol {
+    
 }

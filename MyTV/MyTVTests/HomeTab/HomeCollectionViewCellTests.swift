@@ -8,48 +8,53 @@
 import XCTest
 @testable import MyTV
 
-final class HomeCollectionViewCellTests: XCTestCase {
+class MockImageLoader: ImageLoaderProtocol {
+    var mockImage: UIImage?
 
-    var cell: HomeCollectionViewCell!
-
-    override func setUpWithError() throws {
-        try super.setUpWithError()
-        // Create an instance of HomeCollectionViewCell from the storyboard or programmatically
-        // Ensure that the cell has been loaded properly, including its outlets
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        let collectionView = viewController.homeCollectionView
-        let indexPath = IndexPath(item: 0, section: 0)
-        cell = collectionView?.dataSource?.collectionView(collectionView!, cellForItemAt: indexPath) as? HomeCollectionViewCell
-    }
-    
-    override func tearDownWithError() throws {
-        cell = nil
-        try super.tearDownWithError()
-    }
-
-    func testSetThumbnailAndTitle() {
-        // Given
-        let thumbnail: String? = "https://example.com/image.jpg"
-        let title: String? = "Test Title"
-
-        // When
-        cell.setThumbnailAndTitle(thumbnail: thumbnail, title: title)
-
-        // Then
-        // Use XCTestExpectation to wait for the asynchronous task to complete
-        let expectation = XCTestExpectation(description: "Image download completion")
-        
-        // Assuming the download takes less than 5 seconds. You may adjust the timeout based on your needs.
-        let result = XCTWaiter.wait(for: [expectation], timeout: 5.0)
-        if result == XCTWaiter.Result.timedOut {
-            // The asynchronous task didn't complete within the timeout
-            XCTFail("Timed out waiting for image download.")
-        }
-
-        // Add additional assertions based on your requirements
-        XCTAssertNotNil(cell.imageView.image, "Image should not be nil")
-        XCTAssertEqual(cell.titleLabel.text, title, "Title should match the expected value")
+    func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+        completion(mockImage)
     }
 }
 
+class HomeCollectionViewCellTests: XCTestCase {
+    
+    var cell: HomeCollectionViewCell!
+    var bundle: Bundle!
+    
+    override func setUpWithError() throws {
+        try super.setUpWithError()
+        self.bundle = Bundle(for: HomeCollectionViewCell.self)
+        let nib = UINib(nibName: "HomeCollectionViewCell", bundle: self.bundle)
+        self.cell = (nib.instantiate(withOwner: nil, options: nil).first as! HomeCollectionViewCell)
+    }
+    
+    override func tearDownWithError() throws {
+        self.cell = nil
+        try super.tearDownWithError()
+    }
+
+    func testSetThumbnailAndTitleWithThumbnail() {
+            let mockImageLoader = MockImageLoader()
+            cell.imageLoader = mockImageLoader
+        let customImage = UIImage(named: "noImage", in: self.bundle, compatibleWith: nil)
+            mockImageLoader.mockImage = customImage
+            let thumbnailURL = URL(string: "https://example.com/thumb.jpg")!
+
+            cell.setThumbnailAndTitle(thumbnail: thumbnailURL.absoluteString, title: "Test Title")
+
+            XCTAssertEqual(cell.imageView.image, customImage)
+            XCTAssertEqual(cell.titleLabel.text, "Test Title")
+        }
+
+        func testSetThumbnailAndTitleWithoutThumbnail() {
+            let mockImageLoader = MockImageLoader()
+            cell.imageLoader = mockImageLoader
+            let customImage = UIImage(named: "noImage", in: bundle, compatibleWith: nil)
+            mockImageLoader.mockImage = customImage
+
+            cell.setThumbnailAndTitle(thumbnail: nil, title: "Test Title")
+
+            XCTAssertEqual(cell.imageView.image, customImage)
+            XCTAssertEqual(cell.titleLabel.text, "Test Title")
+        }
+}
