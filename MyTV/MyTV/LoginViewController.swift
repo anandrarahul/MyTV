@@ -7,6 +7,8 @@
 
 import UIKit
 
+typealias LoginAlertCallback = (String) -> Void
+
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginTitle: UILabel!
@@ -16,9 +18,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var copyRightLabel: UILabel!
     @IBOutlet weak var loginImageView: UIImageView!
     
+    var loginAlertCallback: LoginAlertCallback?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.title = NSLocalizedString("Application.Title", comment: "app name")
+//        self.navigationController?.title = NSLocalizedString("Application.Title", comment: "app name")
         self.loginImageView.image = UIImage(named: "matchingMovie")
         self.loginTitle.text = NSLocalizedString("Login.Title", comment: "login")
         self.loginSubTitle.text = NSLocalizedString("Login.SubTitle", comment: "login subtitle")
@@ -85,6 +89,7 @@ class LoginViewController: UIViewController {
         let alertController = UIAlertController(title: "Login", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
+        self.loginAlertCallback?(message)
     }
 }

@@ -16,7 +16,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var refreshButton: UIButton!
     
     private let restApi = RestAPI()
+    private var videoListService: VideoListNetworkServiceProtocol = VideoListNetworkService()
     var videoDetailsList: [VideoDetails] = []
+    
+    convenience init(videoListService: VideoListNetworkServiceProtocol) {
+        self.init()
+        self.videoListService = videoListService
+    }
     
     @IBAction func refreshButtonTapped(_ sender: UIButton) {
         self.homeCollectionView.isHidden = true
@@ -29,6 +35,11 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupCollectionView()
+        self.performNetworkCall()
+    }
+    
+    private func setupCollectionView() {
         self.homeCollectionView.dataSource = self
         self.homeCollectionView.delegate = self
         self.homeCollectionView.isHidden = true
@@ -38,7 +49,6 @@ class HomeViewController: UIViewController {
         self.activityIndicator.startAnimating()
         let nib = UINib(nibName: "HomeCollectionViewCell", bundle: nil)
         self.homeCollectionView.register(nib, forCellWithReuseIdentifier: "HomeCollectionViewCell")
-        self.performNetworkCall()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,8 +56,7 @@ class HomeViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = NSLocalizedString("home.title", comment: "")
     }
     
-    private func performNetworkCall() {
-        
+    func performNetworkCall() {
         if let endpoint = self.restApi.getUrlForVideos() {
             VideoListNetworkService.shared.fetchVideoList(endpoint: endpoint) { videoDetails, error in
                 DispatchQueue.main.async {

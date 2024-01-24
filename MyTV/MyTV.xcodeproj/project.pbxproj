@@ -28,6 +28,7 @@
 		F45EB8B52B5EC1F4004C0564 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45EB8B42B5EC1F4004C0564 /* MockURLSession.swift */; };
 		F486A4B82B31692200E324AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A4B72B31692200E324AF /* HomeViewController.swift */; };
 		F486A4BA2B32AE1900E324AF /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */; };
+		F4BB0DD92B5EFB390001B988 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB0DD82B5EFB390001B988 /* HomeViewControllerTests.swift */; };
 		F4DB08F42AE7B14600C4CA36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F32AE7B14600C4CA36 /* AppDelegate.swift */; };
 		F4DB08F62AE7B14600C4CA36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F52AE7B14600C4CA36 /* SceneDelegate.swift */; };
 		F4DB08F82AE7B14600C4CA36 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB08F72AE7B14600C4CA36 /* LoginViewController.swift */; };
@@ -77,6 +78,7 @@
 		F45EB8B42B5EC1F4004C0564 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		F486A4B72B31692200E324AF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F486A4B92B32AE1900E324AF /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		F4BB0DD82B5EFB390001B988 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		F4CB1F912AE8CE0D00F0C00E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4CB1F922AE8CE1400F0C00E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		F4CB1F9C2AE8CEE300F0C00E /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		F45447962B5D9A620082A50D /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
+				F4BB0DD82B5EFB390001B988 /* HomeViewControllerTests.swift */,
 				F45447982B5D9ADA0082A50D /* HomeCollectionViewCellTests.swift */,
 				F45EB8B22B5E4AFF004C0564 /* VideoListNetworkServiceTests.swift */,
 				F45EB8B42B5EC1F4004C0564 /* MockURLSession.swift */,
@@ -388,6 +391,7 @@
 				F45EB8AF2B5E452D004C0564 /* RestAPITests.swift in Sources */,
 				F443AD952B58457C00DDF825 /* LoginViewControllerTests.swift in Sources */,
 				F45EB8B32B5E4AFF004C0564 /* VideoListNetworkServiceTests.swift in Sources */,
+				F4BB0DD92B5EFB390001B988 /* HomeViewControllerTests.swift in Sources */,
 				F443AD972B58478500DDF825 /* MockNavigationController.swift in Sources */,
 				F45EB8B52B5EC1F4004C0564 /* MockURLSession.swift in Sources */,
 				F45EB8AD2B5E43B2004C0564 /* VideoDetailsTests.swift in Sources */,
