@@ -35,26 +35,26 @@ class HomeCollectionViewCellTests: XCTestCase {
 
     func testSetThumbnailAndTitleWithThumbnail() {
             let mockImageLoader = MockImageLoader()
-            cell.imageLoader = mockImageLoader
+        self.cell.imageLoader = mockImageLoader
         let customImage = UIImage(named: "noImage", in: self.bundle, compatibleWith: nil)
             mockImageLoader.mockImage = customImage
             let thumbnailURL = URL(string: "https://example.com/thumb.jpg")!
 
-            cell.setThumbnailAndTitle(thumbnail: thumbnailURL.absoluteString, title: "Test Title")
+        self.cell.setThumbnailAndTitle(thumbnail: thumbnailURL.absoluteString, title: "Test Title")
 
-            XCTAssertEqual(cell.imageView.image, customImage)
-            XCTAssertEqual(cell.titleLabel.text, "Test Title")
+        XCTAssertEqual(self.cell.imageView.image, customImage)
+        XCTAssertEqual(self.cell.titleLabel.text, "Test Title")
         }
 
         func testSetThumbnailAndTitleWithoutThumbnail() {
             let mockImageLoader = MockImageLoader()
-            cell.imageLoader = mockImageLoader
+            self.cell.imageLoader = mockImageLoader
             let customImage = UIImage(named: "noImage", in: bundle, compatibleWith: nil)
             mockImageLoader.mockImage = customImage
 
-            cell.setThumbnailAndTitle(thumbnail: nil, title: "Test Title")
+            self.cell.setThumbnailAndTitle(thumbnail: nil, title: "Test Title")
 
-            XCTAssertEqual(cell.imageView.image, customImage)
-            XCTAssertEqual(cell.titleLabel.text, "Test Title")
+            XCTAssertEqual(self.cell.imageView.image, customImage)
+            XCTAssertEqual(self.cell.titleLabel.text, "Test Title")
         }
 }

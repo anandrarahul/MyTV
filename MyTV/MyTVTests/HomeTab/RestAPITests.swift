@@ -22,15 +22,10 @@ final class RestAPITests: XCTestCase {
     func testGetUrlForVideos() {
         
         let restAPI = RestAPI()
-        
         let url = restAPI.getUrlForVideos()
         
         XCTAssertNotNil(url)
-        
-        // Load the test plist
         let testPlist = loadTestPlist()
-        
-        // Retrieve the expected host value from the test plist
         guard let expectedHost = testPlist.object(forKey: "HOST") as? String else {
             fatalError("Expected host not found in test plist")
         }
